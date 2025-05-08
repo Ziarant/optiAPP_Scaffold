@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>预设</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/setting-50.png</normaloff>../icons/setting-50.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: #f0f2f5
+}
+
+QWidget {
+	border: 1px solid #C2C7CB;
+}
+
+Line {
+	color: #AA0000;
+	background-color: solid #e0e0e0;
+}
+
+QToolButton {
+	background-color: #A6A6A6;
+	border: 1px solid;
+	border-radius: 3px;
+}
+
+QToolButton:hover {
+    background-color: #E6E6E6;
+}
+
+QToolButton:checked {
+	background-color:  qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #A6A6A6, stop:1 #F8B177);
+	border:2px solid #C55D08;
+}
+
+QPushButton {
+	background-color: #A6A6A6;
+	border: 1px solid;
+	border-radius: 3px;
+}
+
+QPushButton:hover {
+    background-color: #E6E6E6;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="1" colspan="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="0" colspan="3">
+    <widget class="QLineEdit" name="hmbatchLineEdit">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="3">
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="hmtemplateButton">
+     <property name="minimumSize">
+      <size>
+       <width>180</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>设置abaqus-standard配置路径</string>
+     </property>
+     <property name="text">
+      <string>Hypermesh模板文件</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../icons/floder.png</normaloff>../icons/floder.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QLineEdit" name="hmtemplateLineEdit">
+     <property name="minimumSize">
+      <size>
+       <width>380</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="hmbatchButton">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>35</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>设置hmbatch.exe路径</string>
+     </property>
+     <property name="text">
+      <string>Hypermesh批处理器</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../icons/floder.png</normaloff>../icons/floder.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="7" column="0" colspan="3">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>计算设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="parallelCheckBox">
+        <property name="text">
+         <string>并行计算</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="spinBox">
+        <property name="maximum">
+         <number>20</number>
+        </property>
+        <property name="value">
+         <number>4</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>CPU数目：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

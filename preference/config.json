@@ -1,0 +1,21 @@
+{
+    "hmtemplatefilePath": "D:/Program Files/Altair/2021/hwdesktop/templates/feoutput/abaqus/standard.3d",
+    "hmbatchPath": "D:/Program Files/Altair/2021/hwdesktop/hm/bin/win64/hmbatch.exe",
+    "hmfilePath": "",
+    "workPath": "",
+    "parallel": false,
+    "cpu": 4,
+    "curvesIDFile": "e:\\GitHub\\optiAPP\\preference\\curvesID.json",
+    "conditions": {
+        "ICP": "e:\\GitHub\\optiAPP\\preference\\condition_ICP.json",
+        "LGF": "e:\\GitHub\\optiAPP\\preference\\condition_LGF.json",
+        "LGF+B": "e:\\GitHub\\optiAPP\\preference\\condition_LGF+B.json"
+    },
+    "script": {
+        "condition": {
+            "ICP": "e:\\GitHub\\optiAPP/script/tcl\\ICP.tcl",
+            "LGF": "e:\\GitHub\\optiAPP/script/tcl\\LGF.tcl",
+            "LGF+B": "e:\\GitHub\\optiAPP/script/tcl\\LGF+B.tcl"
+        }
+    }
+}

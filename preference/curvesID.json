@@ -1,0 +1,38 @@
+{
+    "SM": {
+        "right": 1,
+        "left": 10
+    },
+    "DM": {
+        "right": 2,
+        "left": 11
+    },
+    "MP": {
+        "right": 3,
+        "left": 12
+    },
+    "AT": {
+        "right": 4,
+        "left": 13
+    },
+    "MT": {
+        "right": 5,
+        "left": 14
+    },
+    "PT": {
+        "right": 6,
+        "left": 15
+    },
+    "ILP": {
+        "right": 7,
+        "left": 16
+    },
+    "SLP": {
+        "right": 8,
+        "left": 17
+    },
+    "AD": {
+        "right": 9,
+        "left": 18
+    }
+}
