@@ -1,12 +1,13 @@
 import os, json
 
-def generate_condition_script(templatefile : str, 
-                              readfile : str, 
+def generate_distElems_script(templatefile : str, 
+                              readfile : str,
                               curvesIDFile : str, 
-                              conditions : dict, 
+                              conditions : dict,
+                              moveElems : dict, 
                               workPath : str, 
                               savePath : str,
-                              cycleCount : int = 0) -> list:
+                              cycleCount : int = 0):
     """
     输入：
         templatefile, str, 模板文件路径
@@ -21,15 +22,15 @@ def generate_condition_script(templatefile : str,
     """
     tclDict = {}
     inpDict = {}
-    
+
     # 读取工况序号设置
     with open(curvesIDFile, 'r') as f1:
         curvesID = json.load(f1)
-    
+
     for condition in conditions:
-        filePath = os.path.join(savePath, condition+'.tcl')
-        conditionJson = conditions[condition]
-        inpPath = os.path.join(workPath, condition+'_{}.inp'.format(cycleCount))
+        # 脚本文件名：moveElems
+        filePath = os.path.join(savePath, '{}_moveElems.tcl'.format(condition))
+        inpPath = os.path.join(workPath, '{}_Mat_{}.inp'.format(condition, cycleCount))
         inpPath = inpPath.replace('\\', '/')
         # 检查是否存在该文件
         if os.path.exists(filePath):
@@ -38,6 +39,7 @@ def generate_condition_script(templatefile : str,
         line0 = '*templatefileset "{}"\n'.format(templatefile)
         line1 = '*readfile "{}"\n'.format(readfile)
         # 新建、编写.tcl文件
+        conditionJson = conditions[condition]
         with open(conditionJson, 'r') as fc:
             conditionDict = json.load(fc)
         with open(filePath, 'w') as f:
@@ -58,21 +60,28 @@ def generate_condition_script(templatefile : str,
                 f.write(line_right_2)
                 f.write(line_left_1)
                 f.write(line_left_2)
+            # 移动单元：
+            for elemSetName in moveElems.keys():
+                elemIdList : list = moveElems[elemSetName]
+                if len(elemIdList) == 0:
+                    continue
+                ids_str : str = ' '.join(map(str, elemIdList))
+                # *createmark elements 1 1-3
+                # *movemark elements 1 "Scaffold_03"
+                f.write('*createmark elements 1 {}\n'.format(ids_str))
+                f.write('*movemark elements 1 "{}"\n'.format(elemSetName))
+                f.write('*clearmark elements 1\n')
             # 设置.inp输出脚本
             # 存在文件时预设答案：依然输出，覆盖原文件
             if os.path.exists(inpPath):
                 f.write('hm_answernext yes\n')      
             lineStr = '*createstringarray 2 "EXPORTIDS_SKIP" "IDRULES_SKIP"\n'
-            lineEnd = '*feoutputwithdata "{}" "{}" 0 0 0 1 2\n'.format(templatefile, inpPath)
+            lineEnd = '*feoutputwithdata "{}" "{}" 0 0 0 1 2'.format(templatefile, inpPath)
             f.write(lineStr)
             f.write(lineEnd)
-            # line_ans = 'hm_answernext yes\n'
-            # line_save = '*writefile "{}"\n'.format(readfile)
-            # f.write(line_ans)
-            # f.write(line_save)
 
         filePath = filePath.replace('\\', '/')
         tclDict[condition] = filePath
         inpDict[condition] = inpPath
                 
-    return [tclDict, inpDict]     
+    return [tclDict, inpDict]

@@ -1,21 +1,89 @@
 {
     "hmtemplatefilePath": "D:/Program Files/Altair/2021/hwdesktop/templates/feoutput/abaqus/standard.3d",
     "hmbatchPath": "D:/Program Files/Altair/2021/hwdesktop/hm/bin/win64/hmbatch.exe",
-    "hmfilePath": "",
-    "workPath": "",
+    "hmfilePath": "F:/JawOpti/HM/JAW_TEST_0.hm",
+    "workPath": "F:/JawOpti/CAE_TEST3",
     "parallel": false,
     "cpu": 4,
-    "curvesIDFile": "e:\\GitHub\\optiAPP\\preference\\curvesID.json",
+    "curvesIDFile": "F:/optiAPP/preference/curvesID.json",
     "conditions": {
-        "ICP": "e:\\GitHub\\optiAPP\\preference\\condition_ICP.json",
-        "LGF": "e:\\GitHub\\optiAPP\\preference\\condition_LGF.json",
-        "LGF+B": "e:\\GitHub\\optiAPP\\preference\\condition_LGF+B.json"
+        "ICP": "f:\\optiAPP\\preference\\condition_ICP.json",
+        "LGF": "f:\\optiAPP\\preference\\condition_LGF.json",
+        "LGF+B": "f:\\optiAPP\\preference\\condition_LGF+B.json"
     },
     "script": {
         "condition": {
-            "ICP": "e:\\GitHub\\optiAPP/script/tcl\\ICP.tcl",
-            "LGF": "e:\\GitHub\\optiAPP/script/tcl\\LGF.tcl",
-            "LGF+B": "e:\\GitHub\\optiAPP/script/tcl\\LGF+B.tcl"
+            "ICP": "f:/optiAPP/script/tcl/ICP.tcl",
+            "LGF": "f:/optiAPP/script/tcl/LGF.tcl",
+            "LGF+B": "f:/optiAPP/script/tcl/LGF+B.tcl"
+        },
+        "structure": "f:\\optiAPP/script/tcl\\structure.tcl",
+        "distElems": {
+            "ICP": "f:/optiAPP/script/tcl/ICP_moveElems.tcl",
+            "LGF": "f:/optiAPP/script/tcl/LGF_moveElems.tcl",
+            "LGF+B": "f:/optiAPP/script/tcl/LGF+B_moveElems.tcl"
         }
+    },
+    "inpFile": {
+        "condition": {
+            "ICP": "F:/JawOpti/CAE_TEST3/ICP_0.inp",
+            "LGF": "F:/JawOpti/CAE_TEST3/LGF_0.inp",
+            "LGF+B": "F:/JawOpti/CAE_TEST3/LGF+B_0.inp"
+        },
+        "matOpti": {
+            "ICP": "F:/JawOpti/CAE_TEST2/ICP_Mat_1.inp",
+            "LGF": "F:/JawOpti/CAE_TEST2/LGF_Mat_1.inp",
+            "LGF+B": "F:/JawOpti/CAE_TEST2/LGF+B_Mat_1.inp"
+        }
+    },
+    "odbFile": {
+        "structureOpti": {
+            "LGF+B": "F:/JawOpti/CAE_TEST2/LGF+B_20.odb",
+            "LGF": "F:/JawOpti/CAE_TEST2/LGF_20.odb",
+            "ICP": "F:/JawOpti/CAE_TEST2/ICP_20.odb"
+        },
+        "beamOpti": {
+            "LGF+B": "F:/JawOpti/CAE_TEST2/LGF+B_Mat_0.odb",
+            "LGF": "F:/JawOpti/CAE_TEST2/LGF_Mat_0.odb",
+            "ICP": "F:/JawOpti/CAE_TEST2/ICP_Mat_0.odb"
+        }
+    },
+    "nodeSetName": "FILLINGMATERIAL",
+    "surfNodeSetName": "SURFNODE",
+    "BoneFillRegion": [
+        "Jaw_Right",
+        "JAW_Joint"
+    ],
+    "minTargetStress": 0.8,
+    "maxTargetStress": 3.0,
+    "elemSet": {
+        "Scaffold_03": {
+            "diameter": 0.3,
+            "matCode": 0
+        },
+        "Scaffold_04": {
+            "diameter": 0.4,
+            "matCode": 1
+        },
+        "Scaffold_05": {
+            "diameter": 0.5,
+            "matCode": 2
+        },
+        "Scaffold_06": {
+            "diameter": 0.6,
+            "matCode": 3
+        }
+    },
+    "nodeCount": 11537,
+    "elemCount": 50377,
+    "elemSize": 6.0,
+    "maxIter": {
+        "structureOpti": 21,
+        "beamOpti": 15
+    },
+    "autoSubmit": true,
+    "retainOdb": {
+        "structureOpti": true,
+        "beamOpti": true
     }
 }

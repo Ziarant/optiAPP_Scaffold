@@ -1,10 +1,9 @@
 # coding=utf-8
-import sys, os, ctypes
+import sys, ctypes
+
 # 强制使用单独的AppUserModelID-->新资源支配权限
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('myappid') 
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from pyqtgraph.Qt import QtGui, QtCore
-
+from PyQt5.QtWidgets import QApplication
 
 def app_exit():
         # 程序退出时的行为:清空变量
@@ -24,5 +23,3 @@ if __name__ == '__main__':
     window.show()
     
     sys.exit(app_exit())
-
-

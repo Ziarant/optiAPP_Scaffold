@@ -1,5 +1,5 @@
-*templatefile "D:/Program Files/Altair/2021/hwdesktop/templates/feoutput/abaqus/standard.3d"
-*readfile ""
+*templatefileset "D:/Program Files/Altair/2021/hwdesktop/templates/feoutput/abaqus/standard.3d"
+*readfile "F:/JawOpti/HM/JAW_TEST_0.hm"
 *curvemodifypointcords 1 1 "-y" 1.0
 *curvemodifypointcords 1 2 "-y" 1.0
 *curvemodifypointcords 10 1 "-y" 1.0
@@ -37,4 +37,5 @@
 *curvemodifypointcords 18 1 "-y" 0.28
 *curvemodifypointcords 18 2 "-y" 0.28
 hm_answernext yes
-*feoutputwithdata "D:/Program Files/Altair/2021/hwdesktop/templates/feoutput/abaqus/standard.3d" "ICP_0.inp" 0 0 0 1 4
+*createstringarray 2 "EXPORTIDS_SKIP" "IDRULES_SKIP"
+*feoutputwithdata "D:/Program Files/Altair/2021/hwdesktop/templates/feoutput/abaqus/standard.3d" "F:/JawOpti/CAE_TEST3/ICP_0.inp" 0 0 0 1 2

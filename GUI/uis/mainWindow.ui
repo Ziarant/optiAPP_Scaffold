@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>1000</height>
+    <height>1027</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,7 +42,7 @@ QToolButton:hover {
 }
 
 QToolButton:checked {
-	background-color:  qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #A6A6A6, stop:1 #F8B177);
+	background-color:  qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #A6A6A6, stop:1 #CE916A);
 	border:2px solid #C55D08;
 }
 
@@ -79,72 +79,6 @@ QPushButton:hover {
     <property name="bottomMargin">
      <number>10</number>
     </property>
-    <item row="3" column="2" colspan="2">
-     <widget class="QLineEdit" name="workPathLineEdit">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>35</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::Fixed</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>150</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="2" column="0">
-     <widget class="QPushButton" name="hmButton">
-      <property name="minimumSize">
-       <size>
-        <width>150</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
-      <property name="text">
-       <string>初始.hm文件</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../icons/floder.png</normaloff>../icons/floder.png</iconset>
-      </property>
-     </widget>
-    </item>
-    <item row="13" column="0">
-     <widget class="QPushButton" name="beamButton">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
-      <property name="text">
-       <string>梁径优化设置</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../icons/setting-50.png</normaloff>../icons/setting-50.png</iconset>
-      </property>
-     </widget>
-    </item>
     <item row="7" column="2" colspan="2">
      <widget class="QWidget" name="widget" native="true">
       <property name="minimumSize">
@@ -197,6 +131,12 @@ QPushButton:hover {
           <iconset>
            <normaloff>../icons/add.png</normaloff>../icons/add.png</iconset>
          </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
         </widget>
        </item>
        <item>
@@ -217,92 +157,15 @@ QPushButton:hover {
           <iconset>
            <normaloff>../icons/remove.png</normaloff>../icons/remove.png</iconset>
          </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
         </widget>
        </item>
       </layout>
-     </widget>
-    </item>
-    <item row="10" column="0">
-     <widget class="QPushButton" name="structureButton">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="cursor">
-       <cursorShape>PointingHandCursor</cursorShape>
-      </property>
-      <property name="text">
-       <string>结构优化设置</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../icons/setting-50.png</normaloff>../icons/setting-50.png</iconset>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0" colspan="4">
-     <widget class="CTable" name="conditionTableWidget">
-      <column>
-       <property name="text">
-        <string>工况名称</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>工况设置</string>
-       </property>
-      </column>
-     </widget>
-    </item>
-    <item row="12" column="0" colspan="4">
-     <widget class="Line" name="line_3">
-      <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
-      </property>
-      <property name="lineWidth">
-       <number>2</number>
-      </property>
-      <property name="midLineWidth">
-       <number>2</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="workPathButton">
-      <property name="minimumSize">
-       <size>
-        <width>150</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>运行目录</string>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../icons/floder.png</normaloff>../icons/floder.png</iconset>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="0" colspan="4">
-     <widget class="Line" name="line_2">
-      <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
-      </property>
-      <property name="lineWidth">
-       <number>2</number>
-      </property>
-      <property name="midLineWidth">
-       <number>2</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
      </widget>
     </item>
     <item row="13" column="1" colspan="3">
@@ -334,7 +197,39 @@ QPushButton:hover {
         </spacer>
        </item>
        <item>
+        <widget class="QToolButton" name="extendButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>导入初始模型</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/download-96.png</normaloff>../icons/download-96.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QToolButton" name="runBeamButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>50</width>
@@ -353,6 +248,41 @@ QPushButton:hover {
          <property name="icon">
           <iconset>
            <normaloff>../icons/run.png</normaloff>../icons/run.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="beamMonitorButton">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>优化监控器</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/monitoring.png</normaloff>../icons/monitoring.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -380,6 +310,51 @@ QPushButton:hover {
        <iconset>
         <normaloff>../icons/setting-50.png</normaloff>../icons/setting-50.png</iconset>
       </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0" colspan="4">
+     <widget class="Line" name="line_2">
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="midLineWidth">
+       <number>2</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="workPathButton">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>运行目录</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../icons/floder.png</normaloff>../icons/floder.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
      </widget>
     </item>
     <item row="5" column="0" colspan="4">
@@ -401,6 +376,32 @@ QPushButton:hover {
       </property>
      </widget>
     </item>
+    <item row="2" column="2" colspan="2">
+     <widget class="QLineEdit" name="hmLineEdit">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2" colspan="2">
+     <widget class="QLineEdit" name="workPathLineEdit">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="2">
      <spacer name="horizontalSpacer_2">
       <property name="orientation">
@@ -416,6 +417,84 @@ QPushButton:hover {
        </size>
       </property>
      </spacer>
+    </item>
+    <item row="13" column="0">
+     <widget class="QPushButton" name="beamButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>梁径优化设置</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../icons/setting-50.png</normaloff>../icons/setting-50.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QPushButton" name="structureButton">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>结构优化设置</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../icons/setting-50.png</normaloff>../icons/setting-50.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="hmButton">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>35</height>
+       </size>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>初始.hm文件</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../icons/floder.png</normaloff>../icons/floder.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
     </item>
     <item row="7" column="0">
      <widget class="QPushButton" name="conditionButton">
@@ -435,16 +514,81 @@ QPushButton:hover {
        <iconset>
         <normaloff>../icons/setting-50.png</normaloff>../icons/setting-50.png</iconset>
       </property>
-     </widget>
-    </item>
-    <item row="2" column="2" colspan="2">
-     <widget class="QLineEdit" name="hmLineEdit">
-      <property name="minimumSize">
+      <property name="iconSize">
        <size>
-        <width>0</width>
-        <height>35</height>
+        <width>25</width>
+        <height>25</height>
        </size>
       </property>
+     </widget>
+    </item>
+    <item row="12" column="0" colspan="4">
+     <widget class="Line" name="line_3">
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="midLineWidth">
+       <number>2</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>150</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="8" column="0" colspan="4">
+     <widget class="CTable" name="conditionTableWidget">
+      <column>
+       <property name="text">
+        <string>工况名称</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>工况设置</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="11" column="0" colspan="4">
+     <widget class="CTable" name="structureTable">
+      <column>
+       <property name="text">
+        <string>工况名称</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="16" column="0" colspan="4">
+     <widget class="CTable" name="beamTable">
+      <column>
+       <property name="text">
+        <string>工况名称</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>初始文件</string>
+       </property>
+      </column>
      </widget>
     </item>
     <item row="10" column="2" colspan="2">
@@ -496,16 +640,48 @@ QPushButton:hover {
           <iconset>
            <normaloff>../icons/run.png</normaloff>../icons/run.png</iconset>
          </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="structureMonitorButton">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>优化监控器</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../icons/monitoring.png</normaloff>../icons/monitoring.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
         </widget>
        </item>
       </layout>
      </widget>
-    </item>
-    <item row="11" column="0" colspan="4">
-     <widget class="QTableWidget" name="structureTable"/>
-    </item>
-    <item row="14" column="0" colspan="4">
-     <widget class="QTableWidget" name="beamTable"/>
     </item>
    </layout>
   </widget>
